@@ -1,0 +1,171 @@
+.offers{
+    width: 100%;
+    min-height: 532px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    &__title{
+        font-family: 'Gelasio';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 43px;
+        line-height: 60px;
+        color: #000000;
+        text-align: center;
+        text-shadow: black 1px 0 10px;
+    }
+    &__subtitle{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        text-align: center;
+        color: #000000;
+        opacity: 0.6;
+        margin-top: 20px;
+        text-align: center;
+    }
+    &__content{
+        max-width: 1600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+
+        &__block{
+            width: 262px;
+            display: flex;
+            margin: 0 15px;
+            flex-direction: column;
+            cursor: pointer;
+            transition: .5s;
+            box-shadow: 0px 6px 35px rgba(0, 0, 0, 0.08);
+            padding: 0 5px;
+            box-sizing: border-box;
+
+            &__image img{
+                width: 100%;
+            }
+            &__title{
+                font-family: 'Gelasio';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 36px;
+                color: #000000;
+            }
+            &__description{
+                display: flex;
+                justify-content: space-between;
+
+                &__price p:first-child{
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+                &__price p:nth-child(2){
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+                &__price p:nth-child(3){
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #000000;
+                    
+                }
+                &__price p:nth-child(3)::after{
+                    content: "/person";
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: black;
+                    opacity: 0.6;
+                }
+                &__rating{
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #000000;
+                }
+                
+            }
+        }
+        &__block:hover{
+            transform: scale(1.2);
+        }
+    }
+    &__scroll{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 143px;
+        
+        &__lines{
+            display: flex;
+            margin: 0 40px;
+        }
+        &__line{
+            width: 75px;
+            height: 5px;
+            background: rgba(201, 69, 59, 0.1);
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+        &__line2{
+            width: 75px;
+            height: 5px;
+            background: #C9453B;
+            border-radius: 10px;
+        }
+        &__vector{
+            opacity: 0.3;
+            cursor: pointer;
+        }
+    }
+}
+@media screen and (max-width: 1520px) {
+    .offers__content{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__block{
+            padding-top: 20px;
+        }
+    }
+    .offers__scroll{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    .offers__content{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__block{
+            margin-top: 20px;
+        }
+        &__block:nth-child(even){
+            display: none;
+        }
+    }
+}
